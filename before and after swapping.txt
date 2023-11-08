@@ -1,0 +1,17 @@
+#include <iostream> 
+// Function to swap two numbers 
+void swapNumbers(int &num1, int &num2) { 
+int temp = num1; 
+num1 = num2; 
+num2 = temp; 
+} 
+int main() { 
+int num1, num2; 
+std::cout << "Enter two numbers: " << std::endl; 
+std::cin >> num1 >> num2; 
+std::cout << "Before swapping: num1 = " << num1 << ", num2 = " << num2 << std::endl; 
+// Calling the function to swap numbers 
+swapNumbers(num1, num2); 
+std::cout << "After swapping: num1 = " << num1 << ", num2 = " << num2 << std::endl; 
+return 0; 
+}

@@ -1,0 +1,31 @@
+#include <iostream> 
+int main() { 
+    char input; 
+    std::cout << "Enter the key to instruct the robot (a, b, c, d, e, f): "; 
+    std::cin >> input; 
+ 
+    switch (input) { 
+        case 'a': 
+            std::cout << "Robot moves left." << std::endl; 
+            break; 
+        case 'b': 
+            std::cout << "Robot moves right." << std::endl; 
+            break; 
+        case 'c': 
+            std::cout << "Robot moves forward." << std::endl; 
+            break; 
+        case 'd': 
+            std::cout << "Robot moves backward." << std::endl; 
+            break; 
+        case 'e': 
+            std::cout << "Robot jumps." << std::endl; 
+            break; 
+        case 'f': 
+            std::cout << "Robot stops." << std::endl; 
+            break; 
+        default: 
+            std::cout << "You have selected the wrong key. Please try again using simple instructions." << 
+std::endl; 
+    } 
+    return 0; 
+} 

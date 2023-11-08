@@ -1,0 +1,12 @@
+#include <iostream> 
+int main() { 
+    int i = 1; 
+    std::cout << "Even numbers from 1 to 10: " << std::endl; 
+    while (i <= 10) { 
+        if (i % 2 == 0) { 
+            std::cout << i << " "; 
+        } 
+        i++; 
+    } 
+    return 0; 
+} 

@@ -1,0 +1,33 @@
+#include <iostream> 
+#include <string> 
+ 
+struct Student { 
+    int roll_number; 
+    std::string name; 
+    std::string address; 
+}; 
+ 
+int main() { 
+    // Creating an array of structures to hold information of two students 
+    Student students[2]; 
+ 
+    // Input student information 
+    for (int i = 0; i < 2; ++i) { 
+        std::cout << "Enter details for student " << i + 1 << ":\n"; 
+        std::cout << "Roll Number: "; 
+        std::cin >> students[i].roll_number; 
+        std::cout << "Name: "; 
+        std::cin.ignore(); 
+        std::getline(std::cin, students[i].name); 
+        std::cout << "Address: "; 
+        std::getline(std::cin, students[i].address); 
+    } 
+// Displaying student information 
+for (int i = 0; i < 2; ++i) { 
+std::cout << "\nDetails of student " << i + 1 << ":\n"; 
+std::cout << "Roll Number: " << students[i].roll_number << std::endl; 
+std::cout << "Name: " << students[i].name << std::endl; 
+std::cout << "Address: " << students[i].address << std::endl; 
+} 
+return 0; 
+}

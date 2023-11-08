@@ -1,0 +1,33 @@
+#include <iostream> 
+#include <string> 
+class Student { 
+private: 
+    std::string name; 
+    int rollNumber; 
+    std::string address; 
+ 
+public: 
+    // Function to set student details 
+    void setDetails(std::string studentName, int studentRollNumber, std::string studentAddress) { 
+        name = studentName; 
+        rollNumber = studentRollNumber; 
+        address = studentAddress; 
+    } 
+ 
+    // Function to print student details 
+    void printDetails() { 
+        std::cout << "Student Details:" << std::endl; 
+        std::cout << "Name: " << name << std::endl; 
+        std::cout << "Roll Number: " << rollNumber << std::endl; 
+        std::cout << "Address: " << address << std::endl; 
+} 
+}; 
+int main() { 
+// Creating an object of the Student class 
+Student student; 
+// Setting details for the student 
+student.setDetails("John Doe", 12345, "123, Main Street, City"); 
+// Printing student details 
+student.printDetails(); 
+return 0; 
+}

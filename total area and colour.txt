@@ -1,0 +1,47 @@
+#include <iostream> 
+// First base class 
+class Shape { 
+    protected: 
+        int width; 
+        int height; 
+    public: 
+        void setWidth(int w) { 
+            width = w; 
+        } 
+        void setHeight(int h) { 
+            height = h; 
+        } 
+}; 
+ 
+// Second base class 
+class Paint { 
+    public: 
+        void setColor(std::string c) { 
+            color = c; 
+        } 
+        std::string getColor() { 
+            return color; 
+        } 
+    protected: 
+        std::string color; 
+}; 
+ 
+// Derived class inheriting from two base classes 
+class Rectangle: public Shape, public Paint { 
+    public: 
+        int getArea() { 
+            return (width * height); 
+        } 
+}; 
+ 
+int main() { 
+    Rectangle rect; 
+    rect.setWidth(5); 
+    rect.setHeight(7); 
+    rect.setColor("Red"); 
+ 
+    std::cout << "Total area: " << rect.getArea() << std::endl; 
+    std::cout << "Color: " << rect.getColor() << std::endl; 
+ 
+    return 0; 
+}
